@@ -43,6 +43,8 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.22.1'
 
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.0'
+
+    implementation 'jstl:jstl:1.2'
 }
 
 test {

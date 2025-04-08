@@ -28,10 +28,8 @@ public enum TodoService {
     }
 
     public void register(TodoDTO todoDTO) throws SQLException {
-//        System.out.println("DEBUG........." + todoDTO);
         TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
         log.info(todoVO);
-//        System.out.println("todoVO: " + todoVO);
         dao.insert(todoVO);
     }
 
@@ -54,6 +52,15 @@ public enum TodoService {
         dto.setTitle("Sample DTO");
         dto.setFinished(true);
         return dto;
+    }
+
+    public List<TodoDTO> listAll() throws Exception {
+        List<TodoVO> voList = dao.selectAll();
+        log.info("voList.................");
+        log.info(voList);
+
+        List<TodoDTO> dtoList = voList.stream().map(vo -> modelMapper.map(vo, TodoDTO.class)).collect(Collectors.toList());
+        return dtoList;
     }
 }
 
