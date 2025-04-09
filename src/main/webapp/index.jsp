@@ -8,6 +8,7 @@
 <h1>Todo : 해야 할 일들
 </h1>
 <br/>
-<a href="/todo/list">Todo Service</a>
+<a href="/todo/list">Todo List</a>
+<a href="/todo/register">Todo Register</a>
 </body>
 </html>
