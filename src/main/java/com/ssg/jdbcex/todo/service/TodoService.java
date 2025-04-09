@@ -62,6 +62,16 @@ public enum TodoService {
         List<TodoDTO> dtoList = voList.stream().map(vo -> modelMapper.map(vo, TodoDTO.class)).collect(Collectors.toList());
         return dtoList;
     }
+
+    public void remove(Long tno) throws SQLException {
+        dao.deleteOne(tno);
+    }
+
+    public void modify(TodoDTO todoDTO) throws Exception {
+        log.info("todoDTO: " + todoDTO);
+        TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
+        dao.updateOne(todoVO);
+    }
 }
 
 // enum 타입은 정해진 수만큼 객체를 생성할 수 있다.

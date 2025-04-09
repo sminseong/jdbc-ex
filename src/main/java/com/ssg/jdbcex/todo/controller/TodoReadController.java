@@ -1,4 +1,4 @@
-package com.ssg.jdbcex.todo;
+package com.ssg.jdbcex.todo.controller;
 
 import com.ssg.jdbcex.todo.dto.TodoDTO;
 import com.ssg.jdbcex.todo.service.TodoService;

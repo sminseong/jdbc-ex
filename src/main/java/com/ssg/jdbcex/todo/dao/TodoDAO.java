@@ -86,5 +86,4 @@ public class TodoDAO {
         ps.setLong(4, todoVO.getTno());
         ps.executeUpdate();
     }
-
 }

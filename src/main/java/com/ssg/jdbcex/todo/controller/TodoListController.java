@@ -1,8 +1,7 @@
-package com.ssg.jdbcex.todo;
+package com.ssg.jdbcex.todo.controller;
 
 import com.ssg.jdbcex.todo.dto.TodoDTO;
 import com.ssg.jdbcex.todo.service.TodoService;
-import com.sun.tools.javac.comp.Todo;
 import lombok.extern.log4j.Log4j2;
 
 import javax.servlet.ServletException;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 @Log4j2

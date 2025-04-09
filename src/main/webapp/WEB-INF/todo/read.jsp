@@ -15,5 +15,9 @@
     <div>${dto.title}</div>
     <div>${dto.dueDate}</div>
     <div>${dto.finished}</div>
+    <div>
+        <a href="/todo/modify?tno=${dto.tno}">Modify/Remove</a>
+        <a href="/todo/list">List</a>
+    </div>
 </body>
 </html>
